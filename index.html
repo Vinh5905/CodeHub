@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Link Fira Code  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .center-all {
+                @apply grid place-items-center
+            }
+
+            .normal-img {
+                @apply bg-cover bg-center bg-no-repeat
+            }
+
+            .skill-modify {
+                @apply inline-flex text-sm rounded-full px-3 py-1.5 bg-gray-100 mb-2 mr-1
+            }
+
+        }
+    </style>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .font-lili {
+            font-family: 'Lilita One', sans-serif;
+        }
+
+        .font-fira {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(233, 234, 255, 0.292);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .user-img {
+            box-shadow: 0 8px 32px 0 rgba(233, 234, 255, 0.292);
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            aspect-ratio: 3/4;
+        }
+
+        .aspect-ratio-4-3 {
+            aspect-ratio: 4/3;
+        }
+
+        .logo {
+            width: -webkit-fill-available
+        }
+
+        .team-shadow {
+            box-shadow: 3px 3px 10px 0 rgba(224, 203, 236, 0.292);
+        }
+
+        .bg-top-center {
+            background-position: top center !important;
+        }
+
+        .layer {
+            background-color: rgba(0, 0, 0, 0.45);
+        }
+
+        .modal:hover .modal-layout {
+            display:grid !important;
+            animation: opacity 0.3s 1 forwards;
+        }
+
+        .modal:hover .modal-inside {
+            display:grid !important;
+            animation: opacity 0.3s 1 forwards, translate-a-bit 0.3s 1 forwards
+        }
+
+        @keyframes opacity {
+            0% {
+                opacity:0;
+            }
+            100% {
+                opacity:1;
+            }
+        }
+
+        @keyframes translate-a-bit {
+            0% {
+                transform: translateY(50%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="Hacker_mode" class="h-fit w-full flex justify-center bg-gray-800 font-fira">
+            <!-- content  -->
+            <div class="w-[1100px] relative py-32">
+                <div class="h-16 bg-gray-800 absolute top-0 left-0 right-0 flex pt-5 items-center justify-between">
+                    <div class="w-32 h-7 bg-contain bg-center bg-no-repeat"
+                        style="background-image: url(https://lh3.googleusercontent.com/pw/ADCreHdaOMYiUdjIlNAkd_b5__H927yPc0fySkMRdRf1qaRgU26I1UW89DW_9LsfRbU7yvUEOfkbvk1sYWqNZIgNFAf40q51O1fZeMm91sAFycV-reJJcLw=w2400);">
+                    </div>
+
+                    <div class="h-[21px] justify-start items-start gap-8 inline-flex">
+                        <div class="justify-start items-start flex">
+                            <div class="text-teal-600 text-base font-medium font-['Fira Code']">#</div>
+                            <div class="whitespace-nowrap text-white text-base font-medium font-['Fira Code']">home
+                            </div>
+                        </div>
+                        <div class="justify-start items-start flex">
+                            <div class="text-teal-600 text-base font-normal font-['Fira Code']">#</div>
+                            <div class="whitespace-nowrap text-gray-400 text-base font-normal font-['Fira Code']">works
+                            </div>
+                        </div>
+                        <div class="justify-start items-start flex">
+                            <div class="text-teal-600 text-base font-normal font-['Fira Code']">#</div>
+                            <div class="whitespace-nowrap text-gray-400 text-base font-normal font-['Fira Code']">
+                                about-us</div>
+                        </div>
+                        <div class="justify-start items-start flex">
+                            <div class="text-teal-600 text-base font-normal font-['Fira Code']">#</div>
+                            <div class="whitespace-nowrap text-gray-400 text-base font-normal font-['Fira Code']">
+                                contacts</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="flex gap-16">
+                    <div>
+                        <!-- header text -->
+                        <div class="mb-8">
+                            <span class="text-white font-semibold text-[32px]"><span
+                                    class="text-teal-600 font-semibold text-[32px]">Team 4 aka CodeHub</span> </br>never gonna let you down!</span>
+                        </div>
+
+                        <p class="text-gray-500 mb-6">Our awesome mentors: Khuong An, Thanh Hai, Huu Phuoc, Nhu Y.</br>
+                            We have put a lot of dedication and effort into creating the products below, if you have any comment, please let us know so that we can learn from them for the next time ♥️
+                        </p>
+
+                        <a href="#stop-here" class="block text-white inline-flex items-center px-4 py-2 border border-solid border-teal-600 hover:bg-teal-600 transition-all">
+                            Khám phá team tui hoii!!
+                        </a>
+                    </div>
+
+                    <div class="relative object-contain">
+                        <div class="w-96 object-contain relative z-10">
+                            <img class="" src="./img/hacker_person.png" alt="">
+                        </div>
+                        <div class="absolute object-contain inline-flex w-36 top-16 -left-7">
+                            <img class="" src="./img/pattern_hacker.png" alt="">
+                        </div>
+                        <div class="absolute object-contain inline-flex w-20 bottom-20 z-20 right-0">
+                            <img class="" src="./img/Dots.png" alt="">
+                        </div>
+                        <div class="font-base text-gray-500 flex items-center p-2 border border-solid border-gray-500">
+                            <div class="w-4 h-4 bg-teal-600 mr-2"></div>
+                            <div>Currently studying at <span class="text-white">UIT</span></div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="flex justify-center mt-32">
+                    <div class="flex flex-col items-end">
+                        <div class="text-xl relative font-normal border border-gray-400 p-7 text-white">It's not a bug,
+                            it's an
+                            undocumented feature.<div
+                                class="inline-block absolute left-3 top-0 -translate-y-1/2 p-2 rounded-full bg-gray-800">
+                                <img alt="quote" loading="lazy" width="1024" height="1024" decoding="async"
+                                    data-nimg="1" class="object-cover h-auto w-5" style="color:transparent"
+                                    src="quotes.svg">
+                            </div>
+                            <div
+                                class="inline-block absolute right-3 bottom-0 translate-y-1/2 p-2 rounded-full bg-gray-800">
+                                <img alt="quote" loading="lazy" width="1024" height="1024" decoding="async"
+                                    data-nimg="1" class="object-cover h-auto w-5" style="color:transparent"
+                                    src="quotes.svg">
+                            </div>
+                        </div>
+                        <div class="p-3 text-xl border border-t-0 border-gray-400 text-white">- Anonymous</div>
+                    </div>
+                </div>
+                <!-- system-team  -->
+                <div id="stop-here" class="mt-16 pt-10">
+                    <div class="flex items-center justify-between mb-12">
+                        <div class="gap-4 flex items-center">
+                            <div class="flex">
+                                <div class="text-teal-600 text-[28px] font-normal font-['Fira Code']">#</div>
+                                <div class="whitespace-nowrap text-white text-[28px] font-normal font-['Fira Code']">
+                                    systeam-team</div>
+                            </div>
+                            <div class="h-px w-[500px] flex-1 bg-teal-600"></div>
+                        </div>
+                        <div class="text-white text-sm">View all ~~></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-8 justify-center">
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow relative modal"
+                            style="background-image: url(img/1.jpeg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>                        
+                        </a>
+                        <a target="_blank" href="https://kllp031.github.io/"
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow bg-top-center relative modal"
+                            style="background-image: url(img/2.jpeg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                        <a target="_blank"
+                            href="https://longle325.github.io/caca/?fbclid=IwAR1VFXvK_0Yc0PZ_5AmlzQKbfDNY5p1DPaiUKjttI4DdsdG_5EwSrJEmOKQ"
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow bg-top-center relative modal"
+                            style="background-image: url(img/3.png);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow bg-top-center relative modal"
+                            style="background-image: url(img/4.jpeg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow bg-top-center bg-gray-100 bg-gray-100 relative modal"
+                            style="background-image: url(img/5.png);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow relative modal"
+                            style="background-image: url(img/6.jpeg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                        <a target="_blank" href="https://vinh5905.github.io/Infomation_card/"
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow bg-top-center relative modal"
+                            style="background-image: url(https://i.pinimg.com/474x/38/5e/2b/385e2b7c3cf325025b4ed9a4ad2b6c72.jpg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="flex items-center justify-between mb-12">
+                        <div class="gap-4 flex items-center">
+                            <div class="flex">
+                                <div class="text-teal-600 text-[28px] font-normal font-['Fira Code']">#</div>
+                                <div class="whitespace-nowrap text-white text-[28px] font-normal font-['Fira Code']">
+                                    events-team</div>
+                            </div>
+                            <div class="h-px w-[500px] flex-1 bg-teal-600"></div>
+                        </div>
+                        <div class="text-white text-sm">View all ~~></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-8 justify-center">
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow bg-top-center relative modal"
+                            style="background-image: url(img/8.jpeg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow relative modal"
+                            style="background-image: url(img/9.jpeg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow relative modal"
+                            style="background-image: url(img/10.jpeg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="flex items-center justify-between mb-12">
+                        <div class="gap-4 flex items-center">
+                            <div class="flex">
+                                <div class="text-teal-600 text-[28px] font-normal font-['Fira Code']">#</div>
+                                <div class="whitespace-nowrap text-white text-[28px] font-normal font-['Fira Code']">
+                                    communication-team</div>
+                            </div>
+                            <div class="h-px w-[500px] flex-1 bg-teal-600"></div>
+                        </div>
+                        <div class="text-white text-sm">View all ~~></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-8 justify-center">
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow bg-top-center bg-gray-100 relative modal"
+                            style="background-image: url(img/11.png);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                        <a target="_blank" href=""
+                            class="block normal-img h-40 w-40 border-2 border-solid border-teal-600 team-shadow relative modal"
+                            style="background-image: url(img/12.jpeg);">
+                            <div class="absolute inset-0 layer center-all hidden modal-layout">
+                                <div class="text-white bg-teal-600 py-1.5 px-4 rounded-full modal-inside">More</div>
+                            </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div class="">
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
